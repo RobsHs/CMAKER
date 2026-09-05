@@ -15,8 +15,8 @@ export function testTemplatesLibrary(): boolean {
     }
     ids.add(t.id);
 
-    if (!t.elements || t.elements.length < 15) {
-      throw new Error(`Template ${t.id} has insufficient element density (${t.elements.length})`);
+    if (!t.design.elements || t.design.elements.length < 15) {
+      throw new Error(`Template ${t.id} has insufficient element density (${t.design.elements.length})`);
     }
   }
 

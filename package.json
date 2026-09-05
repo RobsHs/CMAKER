@@ -1,7 +1,7 @@
 {
   "name": "cmaker",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -37,5 +37,21 @@
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
     "vite": "^8.2.2"
+  },
+  "description": "Enterprise-grade WYSIWYG Digital Certificate Studio, CSV Bulk Batch Generator, Real-Time Public Verification Portal, and 300 DPI Print Export Pipeline.",
+  "keywords": [
+    "certificate-generator",
+    "wysiwyg-editor",
+    "verifiable-credentials",
+    "qr-code",
+    "bulk-generation",
+    "jspdf",
+    "react19",
+    "tailwind-css"
+  ],
+  "homepage": "https://github.com/RobsHs/CMAKER#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobsHs/CMAKER.git"
   }
 }

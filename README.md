@@ -13,7 +13,7 @@
 [![jsPDF](https://img.shields.io/badge/PDF_Export-300_DPI-E11D48?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://github.com/parallax/jsPDF)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg?style=for-the-badge)](LICENSE)
 
-[Explore Features](#-key-features) • [Quick Start](#-getting-started) • [Templates Library](#-pre-engineered-templates) • [Bulk Engine](#-bulk-generator-engine) • [Verification System](#-public-verification-portal) • [Keyboard Shortcuts](#-canvas-shortcuts)
+[Explore Features](#-key-features) • [Architecture](docs/ARCHITECTURE.md) • [Template Guide](docs/TEMPLATE_GUIDE.md) • [Bulk Spec](docs/BULK_IMPORT_SPEC.md) • [Verification Spec](docs/VERIFICATION_SPEC.md) • [Quick Start](#-getting-started) • [Templates Library](#-pre-engineered-templates) • [Bulk Engine](#-bulk-generator-engine) • [Verification System](#-public-verification-portal) • [Keyboard Shortcuts](#-canvas-shortcuts)
 
 ---
 

@@ -46,3 +46,9 @@ export function generateCertificateId(
   return generatedId || `${prefix}-${year}-${Math.floor(100000 + Math.random() * 900000)}`;
 }
 
+export function validateCertificateNumber(id: string, prefix?: string): boolean {
+  if (!id || typeof id !== 'string') return false;
+  if (prefix && !id.startsWith(prefix)) return false;
+  return id.length >= 8;
+}
+

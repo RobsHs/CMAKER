@@ -1,11 +1,11 @@
 /**
  * Unit Tests for Certificate Number Utilities
  */
-import { generateCertificateNumber, validateCertificateNumber } from '../utils/certificateNumber.ts';
+import { generateCertificateId, validateCertificateNumber } from '../utils/certificateNumber.ts';
 
 export function testCertificateNumberGeneration(): boolean {
-  const id1 = generateCertificateNumber('CERT');
-  const id2 = generateCertificateNumber('UNIV');
+  const id1 = generateCertificateId([], { prefix: 'CERT' });
+  const id2 = generateCertificateId([], { prefix: 'UNIV' });
 
   if (!id1.startsWith('CERT-')) {
     throw new Error(`Expected prefix CERT-, got ${id1}`);

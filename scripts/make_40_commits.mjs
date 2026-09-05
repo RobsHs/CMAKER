@@ -1,11 +1,11 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { execSync } from 'node:child_process';
+import fs from "node:fs";
+import path from "node:path";
+import { execSync } from "node:child_process";
 
-const rootDir = path.resolve('.');
+const rootDir = path.resolve(".");
 
 function run(cmd) {
-  return execSync(cmd, { cwd: rootDir, stdio: 'pipe' }).toString().trim();
+  return execSync(cmd, { cwd: rootDir, stdio: "pipe" }).toString().trim();
 }
 
 function ensureDir(filePath) {
@@ -18,15 +18,17 @@ function ensureDir(filePath) {
 function writeFile(relPath, content) {
   const fullPath = path.join(rootDir, relPath);
   ensureDir(fullPath);
-  fs.writeFileSync(fullPath, content.trim() + '\n', 'utf8');
+  fs.writeFileSync(fullPath, content.trim() + "\n", "utf8");
 }
 
 const commits = [
   // 1. CONTRIBUTING.md
   {
-    msg: 'docs: add comprehensive CONTRIBUTING guidelines and development setup',
+    msg: "docs: add comprehensive CONTRIBUTING guidelines and development setup",
     action() {
-      writeFile('CONTRIBUTING.md', `# Contributing to CMAKER
+      writeFile(
+        "CONTRIBUTING.md",
+        `# Contributing to CMAKER
 
 Thank you for your interest in contributing to **CMAKER**! We welcome contributions from developers, designers, and educators worldwide.
 
@@ -69,15 +71,18 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 1. Ensure \`npm run build\` passes with 0 errors.
 2. Run \`npm run lint\` if available.
 3. Open a Pull Request with a clear description and screenshots/GIFs of UI changes.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 2. CODE_OF_CONDUCT.md
   {
-    msg: 'docs: add Contributor Covenant CODE_OF_CONDUCT',
+    msg: "docs: add Contributor Covenant CODE_OF_CONDUCT",
     action() {
-      writeFile('CODE_OF_CONDUCT.md', `# Contributor Covenant Code of Conduct
+      writeFile(
+        "CODE_OF_CONDUCT.md",
+        `# Contributor Covenant Code of Conduct
 
 ## Our Pledge
 We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
@@ -95,15 +100,18 @@ Community leaders are responsible for clarifying and enforcing our standards of 
 
 ## Attribution
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 3. SECURITY.md
   {
-    msg: 'docs: add project SECURITY policy and vulnerability disclosure protocol',
+    msg: "docs: add project SECURITY policy and vulnerability disclosure protocol",
     action() {
-      writeFile('SECURITY.md', `# Security Policy
+      writeFile(
+        "SECURITY.md",
+        `# Security Policy
 
 ## Supported Versions
 | Version | Supported          |
@@ -125,15 +133,18 @@ Instead, send an email to \`security@cmaker.app\` with:
 - Potential impact
 
 We will respond within 48 hours and coordinate a coordinated disclosure release.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 4. CHANGELOG.md
   {
-    msg: 'docs: create CHANGELOG tracking v1.0.0 through v2.0.0 releases',
+    msg: "docs: create CHANGELOG tracking v1.0.0 through v2.0.0 releases",
     action() {
-      writeFile('CHANGELOG.md', `# Changelog
+      writeFile(
+        "CHANGELOG.md",
+        `# Changelog
 
 All notable changes to **CMAKER** are documented in this file.
 
@@ -155,15 +166,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CSV Bulk Batch Generation engine with column-to-token mapping and ZIP compression.
 - 300 DPI high-resolution PDF export pipeline.
 - Public credential verification portal and admin revocation registry.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 5. ROADMAP.md
   {
-    msg: 'docs: add project ROADMAP detailing upcoming feature releases',
+    msg: "docs: add project ROADMAP detailing upcoming feature releases",
     action() {
-      writeFile('ROADMAP.md', `# 🗺️ CMAKER Product Roadmap
+      writeFile(
+        "ROADMAP.md",
+        `# 🗺️ CMAKER Product Roadmap
 
 ## Phase 1: Foundation & Studio (Completed ✅)
 - [x] High-precision WYSIWYG canvas editor (A4 & US Letter, Landscape/Portrait)
@@ -193,15 +207,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ ] Multi-tenant organization accounts with role-based access control (RBAC)
 - [ ] Polygon / Ethereum blockchain credential anchoring
 - [ ] Custom institutional typography font file uploads (.woff2, .ttf)
-`);
-    }
+`,
+      );
+    },
   },
 
   // 6. .github/workflows/ci.yml
   {
-    msg: 'ci: configure GitHub Actions workflow for automated test and build verification',
+    msg: "ci: configure GitHub Actions workflow for automated test and build verification",
     action() {
-      writeFile('.github/workflows/ci.yml', `name: CI
+      writeFile(
+        ".github/workflows/ci.yml",
+        `name: CI
 
 on:
   push:
@@ -231,15 +248,18 @@ jobs:
 
     - name: Build production bundle
       run: npm run build
-`);
-    }
+`,
+      );
+    },
   },
 
   // 7. .github/workflows/deploy.yml
   {
-    msg: 'ci: add GitHub Actions workflow for automated GitHub Pages static deployment',
+    msg: "ci: add GitHub Actions workflow for automated GitHub Pages static deployment",
     action() {
-      writeFile('.github/workflows/deploy.yml', `name: Deploy to GitHub Pages
+      writeFile(
+        ".github/workflows/deploy.yml",
+        `name: Deploy to GitHub Pages
 
 on:
   push:
@@ -288,15 +308,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-`);
-    }
+`,
+      );
+    },
   },
 
   // 8. .github/ISSUE_TEMPLATE/bug_report.md
   {
-    msg: 'chore: add GitHub issue template for bug reports',
+    msg: "chore: add GitHub issue template for bug reports",
     action() {
-      writeFile('.github/ISSUE_TEMPLATE/bug_report.md', `---
+      writeFile(
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        `---
 name: Bug report
 about: Create a report to help us improve CMAKER
 title: '[BUG] '
@@ -324,15 +347,18 @@ If applicable, add screenshots to help explain your problem.
  - OS: [e.g. Windows 11, macOS Sequoia, Ubuntu 24.04]
  - Browser: [e.g. Chrome, Firefox, Safari, Edge]
  - Version: [e.g. 128]
-`);
-    }
+`,
+      );
+    },
   },
 
   // 9. .github/ISSUE_TEMPLATE/feature_request.md
   {
-    msg: 'chore: add GitHub issue template for feature requests',
+    msg: "chore: add GitHub issue template for feature requests",
     action() {
-      writeFile('.github/ISSUE_TEMPLATE/feature_request.md', `---
+      writeFile(
+        ".github/ISSUE_TEMPLATE/feature_request.md",
+        `---
 name: Feature request
 about: Suggest an idea or new template for CMAKER
 title: '[FEAT] '
@@ -351,15 +377,18 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Additional context**
 Add any other context, design mockups, or screenshots about the feature request here.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 10. .github/PULL_REQUEST_TEMPLATE.md
   {
-    msg: 'chore: add pull request template with review checklist',
+    msg: "chore: add pull request template with review checklist",
     action() {
-      writeFile('.github/PULL_REQUEST_TEMPLATE.md', `## Description
+      writeFile(
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        `## Description
 Briefly describe the changes introduced in this Pull Request.
 
 ## Type of Change
@@ -376,15 +405,18 @@ Briefly describe the changes introduced in this Pull Request.
 - [ ] I have commented my code, particularly in hard-to-understand areas.
 - [ ] \`npm run build\` runs cleanly with 0 TypeScript/bundler errors.
 - [ ] Verified responsive layout across desktop and mobile screens.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 11. .editorconfig
   {
-    msg: 'chore: configure .editorconfig for consistent indentation and line endings',
+    msg: "chore: configure .editorconfig for consistent indentation and line endings",
     action() {
-      writeFile('.editorconfig', `root = true
+      writeFile(
+        ".editorconfig",
+        `root = true
 
 [*]
 indent_style = space
@@ -400,15 +432,18 @@ trim_trailing_whitespace = false
 [*.{png,jpg,jpeg,ico,pdf}]
 indent_style = unset
 insert_final_newline = unset
-`);
-    }
+`,
+      );
+    },
   },
 
   // 12. .gitattributes
   {
-    msg: 'chore: configure .gitattributes for cross-platform LF line normalization',
+    msg: "chore: configure .gitattributes for cross-platform LF line normalization",
     action() {
-      writeFile('.gitattributes', `* text=auto eol=lf
+      writeFile(
+        ".gitattributes",
+        `* text=auto eol=lf
 
 *.ts text eol=lf
 *.tsx text eol=lf
@@ -426,15 +461,18 @@ insert_final_newline = unset
 *.ico binary
 *.pdf binary
 *.zip binary
-`);
-    }
+`,
+      );
+    },
   },
 
   // 13. docs/ARCHITECTURE.md
   {
-    msg: 'docs: add ARCHITECTURE.md detailing WYSIWYG canvas rendering pipeline',
+    msg: "docs: add ARCHITECTURE.md detailing WYSIWYG canvas rendering pipeline",
     action() {
-      writeFile('docs/ARCHITECTURE.md', `# CMAKER Architecture Overview
+      writeFile(
+        "docs/ARCHITECTURE.md",
+        `# CMAKER Architecture Overview
 
 CMAKER is built as an enterprise-grade client-side Single Page Application (SPA) utilizing React 19, TypeScript, and modern browser APIs.
 
@@ -458,15 +496,18 @@ graph TD
 
 ## High-DPI Export Pipeline
 Exporting high-fidelity certificates requires overcoming standard 72/96 DPI screen limitations. CMAKER scales canvas elements by a factor of 3.125× (targeting 300 DPI physical print resolution) before serializing to jsPDF with millimeter mapping.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 14. docs/TEMPLATE_GUIDE.md
   {
-    msg: 'docs: add TEMPLATE_GUIDE.md for designing custom vector certificates',
+    msg: "docs: add TEMPLATE_GUIDE.md for designing custom vector certificates",
     action() {
-      writeFile('docs/TEMPLATE_GUIDE.md', `# Certificate Template Authoring Guide
+      writeFile(
+        "docs/TEMPLATE_GUIDE.md",
+        `# Certificate Template Authoring Guide
 
 ## Anatomy of a Professional Template
 Every CMAKER certificate template consists of 6 standard architectural zones:
@@ -491,15 +532,18 @@ export interface CertificateTemplate {
   tags?: string[];
 }
 \`\`\`
-`);
-    }
+`,
+      );
+    },
   },
 
   // 15. docs/BULK_IMPORT_SPEC.md
   {
-    msg: 'docs: add BULK_IMPORT_SPEC.md for CSV batch mapping and data tokens',
+    msg: "docs: add BULK_IMPORT_SPEC.md for CSV batch mapping and data tokens",
     action() {
-      writeFile('docs/BULK_IMPORT_SPEC.md', `# Bulk CSV Batch Generation Specification
+      writeFile(
+        "docs/BULK_IMPORT_SPEC.md",
+        `# Bulk CSV Batch Generation Specification
 
 CMAKER provides high-throughput client-side bulk certificate generation from CSV spreadsheets.
 
@@ -520,15 +564,18 @@ CMAKER provides high-throughput client-side bulk certificate generation from CSV
 3. **Validation**: Detects empty names or malformed dates prior to generation.
 4. **Batch Generation**: Certificates are rendered asynchronously into memory.
 5. **Compression**: Packed into a single \`.zip\` archive using \`JSZip\`.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 16. docs/VERIFICATION_SPEC.md
   {
-    msg: 'docs: add VERIFICATION_SPEC.md for tamper-evident QR validation flow',
+    msg: "docs: add VERIFICATION_SPEC.md for tamper-evident QR validation flow",
     action() {
-      writeFile('docs/VERIFICATION_SPEC.md', `# Credential Verification Specification
+      writeFile(
+        "docs/VERIFICATION_SPEC.md",
+        `# Credential Verification Specification
 
 ## Certificate Identifier Format
 All CMAKER certificates carry an immutable identifier formatted as:
@@ -552,15 +599,18 @@ stateDiagram-v2
 - \`REVOKED\`: Certificate was invalidated due to academic dishonesty, credential recall, or data correction.
 - \`EXPIRED\`: Certificate was authentic but has passed its validity window.
 - \`NOT_FOUND\`: Identifier does not exist in the issuer registry.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 17. docs/PERFORMANCE.md
   {
-    msg: 'docs: add PERFORMANCE.md analyzing 300 DPI client-side PDF export overhead',
+    msg: "docs: add PERFORMANCE.md analyzing 300 DPI client-side PDF export overhead",
     action() {
-      writeFile('docs/PERFORMANCE.md', `# Performance & Memory Optimization
+      writeFile(
+        "docs/PERFORMANCE.md",
+        `# Performance & Memory Optimization
 
 ## High-DPI Canvas Rendering
 Rendering certificates at 300 DPI produces canvas dimensions of **3508 × 2480 pixels** (~8.7 megapixels per certificate).
@@ -569,15 +619,18 @@ Rendering certificates at 300 DPI produces canvas dimensions of **3508 × 2480 p
 1. **CSS Scaling for Thumbnails**: Template previews use CSS \`transform: scale()\` with GPU composition (\`will-change: transform\`), avoiding repeated offscreen canvas allocations.
 2. **Garbage Collection Optimization**: Bitmap objects created during bulk export are explicitly disposed after ZIP streaming.
 3. **Font Subsetting**: System and Google Fonts are cached in memory to eliminate re-fetching during rapid multi-page exports.
-`);
-    }
+`,
+      );
+    },
   },
 
   // 18. docs/API_INTEGRATION.md
   {
-    msg: 'docs: add API_INTEGRATION.md for programmatic credential verification',
+    msg: "docs: add API_INTEGRATION.md for programmatic credential verification",
     action() {
-      writeFile('docs/API_INTEGRATION.md', `# API Integration Guide
+      writeFile(
+        "docs/API_INTEGRATION.md",
+        `# API Integration Guide
 
 While CMAKER operates client-first, verification records can be queried programmatically or integrated into external LMS platforms.
 
@@ -599,15 +652,18 @@ GET /api/v1/verify/{certificate_id}
   "fingerprint": "8f4a2b8e3c1d7f6a5b9e0c3d2e1f4a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f"
 }
 \`\`\`
-`);
-    }
+`,
+      );
+    },
   },
 
   // 19. src/types/verification.ts
   {
-    msg: 'types: extract and modularize verification audit log interfaces',
+    msg: "types: extract and modularize verification audit log interfaces",
     action() {
-      writeFile('src/types/verification.ts', `/**
+      writeFile(
+        "src/types/verification.ts",
+        `/**
  * Verification & Credential Registry Types for CMAKER
  */
 
@@ -644,15 +700,18 @@ export interface VerificationRegistryItem {
   revocation?: RevocationRecord;
   metadata?: Record<string, string | number | boolean>;
 }
-`);
-    }
+`,
+      );
+    },
   },
 
   // 20. src/types/batch.ts
   {
-    msg: 'types: add specialized batch generation dataset types',
+    msg: "types: add specialized batch generation dataset types",
     action() {
-      writeFile('src/types/batch.ts', `/**
+      writeFile(
+        "src/types/batch.ts",
+        `/**
  * Batch & Bulk Generation Types for CMAKER
  */
 
@@ -684,15 +743,18 @@ export interface BatchExportOptions {
   namingPattern: string;
   quality: 'standard' | 'high' | 'print_300dpi';
 }
-`);
-    }
+`,
+      );
+    },
   },
 
   // 21. src/types/export.ts
   {
-    msg: 'types: define canvas export resolution and print profile models',
+    msg: "types: define canvas export resolution and print profile models",
     action() {
-      writeFile('src/types/export.ts', `/**
+      writeFile(
+        "src/types/export.ts",
+        `/**
  * Canvas Export Resolution & Print Profile Models
  */
 
@@ -736,15 +798,18 @@ export const EXPORT_PROFILES: Record<string, ExportProfile> = {
     estimatedFileSizeMb: 2.4
   }
 };
-`);
-    }
+`,
+      );
+    },
   },
 
   // 22. src/utils/contrast.ts
   {
-    msg: 'utils: add color contrast ratio and WCAG accessibility utility',
+    msg: "utils: add color contrast ratio and WCAG accessibility utility",
     action() {
-      writeFile('src/utils/contrast.ts', `/**
+      writeFile(
+        "src/utils/contrast.ts",
+        `/**
  * WCAG 2.1 Color Contrast and Accessibility Utilities
  */
 
@@ -787,15 +852,18 @@ export function isWcagCompliant(
   }
   return isLargeText ? ratio >= 3.0 : ratio >= 4.5;
 }
-`);
-    }
+`,
+      );
+    },
   },
 
   // 23. src/utils/crypto.ts
   {
-    msg: 'utils: add cryptographic SHA-256 certificate fingerprint generator',
+    msg: "utils: add cryptographic SHA-256 certificate fingerprint generator",
     action() {
-      writeFile('src/utils/crypto.ts', `/**
+      writeFile(
+        "src/utils/crypto.ts",
+        `/**
  * Cryptographic Fingerprint Utilities for CMAKER Certificates
  */
 
@@ -834,15 +902,18 @@ export async function verifyCertificateFingerprint(
   const computed = await generateCertificateFingerprint(params);
   return computed.toLowerCase() === expectedHash.toLowerCase();
 }
-`);
-    }
+`,
+      );
+    },
   },
 
   // 24. src/utils/svgPaths.ts
   {
-    msg: 'utils: add SVG path generator utilities for decorative borders and filigrees',
+    msg: "utils: add SVG path generator utilities for decorative borders and filigrees",
     action() {
-      writeFile('src/utils/svgPaths.ts', `/**
+      writeFile(
+        "src/utils/svgPaths.ts",
+        `/**
  * SVG Path Generators for Vector Certificate Ornaments
  */
 
@@ -882,15 +953,18 @@ export function createRosetteDividerPath(width: number): string {
     \`L \${width} 0\`
   ].join(' ');
 }
-`);
-    }
+`,
+      );
+    },
   },
 
   // 25. src/utils/dateFormatter.ts
   {
-    msg: 'utils: add date formatting and multilingual calendar localization helpers',
+    msg: "utils: add date formatting and multilingual calendar localization helpers",
     action() {
-      writeFile('src/utils/dateFormatter.ts', `/**
+      writeFile(
+        "src/utils/dateFormatter.ts",
+        `/**
  * Multilingual Date Formatter for Certificates
  */
 
@@ -925,15 +999,18 @@ export function formatCertificateDate(dateInput: string | Date, style: DateForma
       return \`\${monthsEn[d.getMonth()]} \${day}, \${year}\`;
   }
 }
-`);
-    }
+`,
+      );
+    },
   },
 
   // 26. src/utils/units.ts
   {
-    msg: 'utils: add unit conversion utilities between mm, pt, and px',
+    msg: "utils: add unit conversion utilities between mm, pt, and px",
     action() {
-      writeFile('src/utils/units.ts', `/**
+      writeFile(
+        "src/utils/units.ts",
+        `/**
  * Physical Dimension Conversion Utilities (mm, pt, px)
  */
 
@@ -962,82 +1039,100 @@ export function formatDimensions(widthMm: number, heightMm: number, unit: 'mm' |
   }
   return \`\${Math.round(widthMm)} × \${Math.round(heightMm)} mm\`;
 }
-`);
-    }
+`,
+      );
+    },
   },
 
   // 27. public/samples/university_graduation.csv
   {
-    msg: 'data: add sample CSV dataset for university graduation batch',
+    msg: "data: add sample CSV dataset for university graduation batch",
     action() {
-      writeFile('public/samples/university_graduation.csv', `recipient_name,course_name,honors,issue_date,score,certificate_id
+      writeFile(
+        "public/samples/university_graduation.csv",
+        `recipient_name,course_name,honors,issue_date,score,certificate_id
 "Alexander Wright","Bachelor of Science in Computer Science","Summa Cum Laude","2026-09-05","4.00","CERT-2026-001"
 "Sophia Chen","Bachelor of Science in Data Engineering","Magna Cum Laude","2026-09-05","3.92","CERT-2026-002"
 "Marcus Aurelius Miller","Bachelor of Arts in Philosophy & Law","Cum Laude","2026-09-05","3.85","CERT-2026-003"
 "Isabella Gomez","Bachelor of Science in Biomedical Engineering","Honors Distinction","2026-09-05","3.95","CERT-2026-004"
 "Liam O'Connor","Bachelor of Science in Aerospace Engineering","Magna Cum Laude","2026-09-05","3.90","CERT-2026-005"
-`);
-    }
+`,
+      );
+    },
   },
 
   // 28. public/samples/corporate_leadership.csv
   {
-    msg: 'data: add sample CSV dataset for corporate leadership awards',
+    msg: "data: add sample CSV dataset for corporate leadership awards",
     action() {
-      writeFile('public/samples/corporate_leadership.csv', `recipient_name,course_name,department,issue_date,award_type,certificate_id
+      writeFile(
+        "public/samples/corporate_leadership.csv",
+        `recipient_name,course_name,department,issue_date,award_type,certificate_id
 "Victoria Sterling","Global Leadership Executive Seminar","Enterprise Strategy","2026-09-05","President's Circle","CORP-2026-101"
 "David K. Vance","Senior Management Summit","Product Architecture","2026-09-05","Leadership Excellence","CORP-2026-102"
 "Elena Rostova","Executive Negotiation Masterclass","Mergers & Acquisitions","2026-09-05","Master Strategist","CORP-2026-103"
 "Jordan Takahashi","Organizational Governance & ESG","Corporate Affairs","2026-09-05","Governance Fellow","CORP-2026-104"
-`);
-    }
+`,
+      );
+    },
   },
 
   // 29. public/samples/tech_bootcamp.csv
   {
-    msg: 'data: add sample CSV dataset for tech bootcamp cohort',
+    msg: "data: add sample CSV dataset for tech bootcamp cohort",
     action() {
-      writeFile('public/samples/tech_bootcamp.csv', `recipient_name,course_name,specialization,issue_date,final_grade,certificate_id
+      writeFile(
+        "public/samples/tech_bootcamp.csv",
+        `recipient_name,course_name,specialization,issue_date,final_grade,certificate_id
 "Ethan Walker","Full-Stack Web Engineering Bootcamp","React & Node.js Architecture","2026-09-05","98.5%","BOOT-2026-501"
 "Maya Lin","Cloud Infrastructure & DevOps Mastery","Kubernetes & AWS CI/CD","2026-09-05","99.0%","BOOT-2026-502"
 "Oliver Twist","Smart Contract Security & Web3","Solidity & EVM Audit","2026-09-05","97.2%","BOOT-2026-503"
 "Zara Al-Mansoor","Applied Machine Learning & Neural Nets","PyTorch & Transformers","2026-09-05","100.0%","BOOT-2026-504"
-`);
-    }
+`,
+      );
+    },
   },
 
   // 30. public/samples/medical_symposium.csv
   {
-    msg: 'data: add sample CSV dataset for international medical symposium',
+    msg: "data: add sample CSV dataset for international medical symposium",
     action() {
-      writeFile('public/samples/medical_symposium.csv', `recipient_name,course_name,ceu_credits,issue_date,license_number,certificate_id
+      writeFile(
+        "public/samples/medical_symposium.csv",
+        `recipient_name,course_name,ceu_credits,issue_date,license_number,certificate_id
 "Dr. Benjamin Hayes, M.D.","International Cardiovascular Surgery Symposium","24.0 AMA PRA Category 1","2026-09-05","MD-88412-CA","MED-2026-901"
 "Dr. Sarah Jenkins, Ph.D.","Advanced Clinical Immunology & Vaccines","18.5 AMA PRA Category 1","2026-09-05","PHD-44102-NY","MED-2026-902"
 "Dr. Kenji Tanaka, M.D.","Global Oncology Innovations & Therapeutics","30.0 AMA PRA Category 1","2026-09-05","MD-99120-JP","MED-2026-903"
-`);
-    }
+`,
+      );
+    },
   },
 
   // 31. public/robots.txt
   {
-    msg: 'seo: add robots.txt for search engine crawling and index control',
+    msg: "seo: add robots.txt for search engine crawling and index control",
     action() {
-      writeFile('public/robots.txt', `User-agent: *
+      writeFile(
+        "public/robots.txt",
+        `User-agent: *
 Allow: /
 Allow: /templates
 Allow: /verify/
 Disallow: /api/private/
 
 Sitemap: https://cmaker.app/sitemap.xml
-`);
-    }
+`,
+      );
+    },
   },
 
   // 32. public/sitemap.xml
   {
-    msg: 'seo: add sitemap.xml listing landing page, templates, and verification endpoints',
+    msg: "seo: add sitemap.xml listing landing page, templates, and verification endpoints",
     action() {
-      writeFile('public/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
+      writeFile(
+        "public/sitemap.xml",
+        `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cmaker.app/</loc>
@@ -1060,15 +1155,18 @@ Sitemap: https://cmaker.app/sitemap.xml
     <priority>0.8</priority>
   </url>
 </urlset>
-`);
-    }
+`,
+      );
+    },
   },
 
   // 33. src/tests/certificateNumber.test.ts
   {
-    msg: 'test: add unit tests for certificate ID formatting and validation',
+    msg: "test: add unit tests for certificate ID formatting and validation",
     action() {
-      writeFile('src/tests/certificateNumber.test.ts', `/**
+      writeFile(
+        "src/tests/certificateNumber.test.ts",
+        `/**
  * Unit Tests for Certificate Number Utilities
  */
 import { generateCertificateNumber, validateCertificateNumber } from '../utils/certificateNumber.ts';
@@ -1090,15 +1188,18 @@ export function testCertificateNumberGeneration(): boolean {
 }
 
 testCertificateNumberGeneration();
-`);
-    }
+`,
+      );
+    },
   },
 
   // 34. src/tests/crypto.test.ts
   {
-    msg: 'test: add unit tests for cryptographic hash and fingerprint integrity',
+    msg: "test: add unit tests for cryptographic hash and fingerprint integrity",
     action() {
-      writeFile('src/tests/crypto.test.ts', `/**
+      writeFile(
+        "src/tests/crypto.test.ts",
+        `/**
  * Unit Tests for Cryptographic Utilities
  */
 import { computeSha256 } from '../utils/crypto.ts';
@@ -1110,15 +1211,18 @@ export async function testSha256Computation(): Promise<boolean> {
   }
   return true;
 }
-`);
-    }
+`,
+      );
+    },
   },
 
   // 35. src/tests/contrast.test.ts
   {
-    msg: 'test: add unit tests for color contrast and WCAG compliance calculation',
+    msg: "test: add unit tests for color contrast and WCAG compliance calculation",
     action() {
-      writeFile('src/tests/contrast.test.ts', `/**
+      writeFile(
+        "src/tests/contrast.test.ts",
+        `/**
  * Unit Tests for WCAG Contrast Calculation
  */
 import { getContrastRatio, isWcagCompliant } from '../utils/contrast.ts';
@@ -1144,15 +1248,18 @@ export function testContrastRatio(): boolean {
 }
 
 testContrastRatio();
-`);
-    }
+`,
+      );
+    },
   },
 
   // 36. src/tests/units.test.ts
   {
-    msg: 'test: add unit tests for unit conversion formulas',
+    msg: "test: add unit tests for unit conversion formulas",
     action() {
-      writeFile('src/tests/units.test.ts', `/**
+      writeFile(
+        "src/tests/units.test.ts",
+        `/**
  * Unit Tests for Dimensions & Unit Conversion
  */
 import { mmToPx, pxToMm, mmToPt, ptToMm, INCH_IN_MM } from '../utils/units.ts';
@@ -1185,15 +1292,18 @@ export function testUnitConversions(): boolean {
 }
 
 testUnitConversions();
-`);
-    }
+`,
+      );
+    },
   },
 
   // 37. src/tests/templates.test.ts
   {
-    msg: 'test: add validation tests for all 24 certificate master templates',
+    msg: "test: add validation tests for all 24 certificate master templates",
     action() {
-      writeFile('src/tests/templates.test.ts', `/**
+      writeFile(
+        "src/tests/templates.test.ts",
+        `/**
  * Template Integrity Tests for All 24 Master Templates
  */
 import { TEMPLATES_LIBRARY } from '../templates/templatesData.ts';
@@ -1219,15 +1329,18 @@ export function testTemplatesLibrary(): boolean {
 }
 
 testTemplatesLibrary();
-`);
-    }
+`,
+      );
+    },
   },
 
   // 38. scripts/benchmark.mjs
   {
-    msg: 'perf: add canvas render benchmark script for batch throughput testing',
+    msg: "perf: add canvas render benchmark script for batch throughput testing",
     action() {
-      writeFile('scripts/benchmark.mjs', `/**
+      writeFile(
+        "scripts/benchmark.mjs",
+        `/**
  * Benchmark Script for CMAKER Template Deserialization & Batch Cloning
  */
 import { performance } from 'node:perf_hooks';
@@ -1263,19 +1376,20 @@ const elapsed = performance.now() - start;
 console.log(\`Processed \${iterations} template clones in \${elapsed.toFixed(2)}ms\`);
 console.log(\`Throughput: \${Math.round((iterations / elapsed) * 1000)} templates/sec\`);
 console.log('=== Benchmark Complete ===');
-`);
-    }
+`,
+      );
+    },
   },
 
   // 39. index.html
   {
-    msg: 'seo: enhance index.html with OpenGraph, Twitter Cards, and canonical tags',
+    msg: "seo: enhance index.html with OpenGraph, Twitter Cards, and canonical tags",
     action() {
-      const indexPath = path.join(rootDir, 'index.html');
-      let html = fs.readFileSync(indexPath, 'utf8');
-      if (!html.includes('og:site_name')) {
+      const indexPath = path.join(rootDir, "index.html");
+      let html = fs.readFileSync(indexPath, "utf8");
+      if (!html.includes("og:site_name")) {
         html = html.replace(
-          '<title>CMAKER — Professional Certificate Generator</title>',
+          "<title>CMAKER — Professional Certificate Generator</title>",
           `<title>CMAKER — Professional Certificate Generator</title>
     <meta name="description" content="Enterprise-grade WYSIWYG Digital Certificate Studio, CSV Bulk Batch Generator, Real-Time Public Verification Portal, and 300 DPI Print Export Pipeline." />
     <meta name="keywords" content="certificate generator, digital certificates, verifiable credentials, qr code certificate, bulk certificate maker, 300 dpi pdf certificate" />
@@ -1287,51 +1401,52 @@ console.log('=== Benchmark Complete ===');
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CMAKER — Professional Certificate Generator" />
     <meta name="twitter:description" content="Enterprise-grade WYSIWYG Digital Certificate Studio, CSV Bulk Batch Generator, and Real-Time Public Verification Portal." />
-    <meta name="theme-color" content="#4f46e5" />`
+    <meta name="theme-color" content="#4f46e5" />`,
         );
-        fs.writeFileSync(indexPath, html, 'utf8');
+        fs.writeFileSync(indexPath, html, "utf8");
       }
-    }
+    },
   },
 
   // 40. package.json and README.md
   {
-    msg: 'chore: bump version to 1.1.0 in package.json with updated project metadata',
+    msg: "chore: bump version to 1.1.0 in package.json with updated project metadata",
     action() {
       // 1. Update package.json version to 1.1.0
-      const pkgPath = path.join(rootDir, 'package.json');
-      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-      pkg.version = '1.1.0';
-      pkg.description = 'Enterprise-grade WYSIWYG Digital Certificate Studio, CSV Bulk Batch Generator, Real-Time Public Verification Portal, and 300 DPI Print Export Pipeline.';
+      const pkgPath = path.join(rootDir, "package.json");
+      const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
+      pkg.version = "1.1.0";
+      pkg.description =
+        "Enterprise-grade WYSIWYG Digital Certificate Studio, CSV Bulk Batch Generator, Real-Time Public Verification Portal, and 300 DPI Print Export Pipeline.";
       pkg.keywords = [
-        'certificate-generator',
-        'wysiwyg-editor',
-        'verifiable-credentials',
-        'qr-code',
-        'bulk-generation',
-        'jspdf',
-        'react19',
-        'tailwind-css'
+        "certificate-generator",
+        "wysiwyg-editor",
+        "verifiable-credentials",
+        "qr-code",
+        "bulk-generation",
+        "jspdf",
+        "react19",
+        "tailwind-css",
       ];
-      pkg.homepage = 'https://github.com/RobsHs/CMAKER#readme';
+      pkg.homepage = "https://github.com/RobsHs/CMAKER#readme";
       pkg.repository = {
-        type: 'git',
-        url: 'git+https://github.com/RobsHs/CMAKER.git'
+        type: "git",
+        url: "git+https://github.com/RobsHs/CMAKER.git",
       };
-      fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + '\n', 'utf8');
+      fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + "\n", "utf8");
 
       // 2. Update README.md with badges and links to documentation
-      const readmePath = path.join(rootDir, 'README.md');
-      let readme = fs.readFileSync(readmePath, 'utf8');
-      if (!readme.includes('docs/ARCHITECTURE.md')) {
+      const readmePath = path.join(rootDir, "README.md");
+      let readme = fs.readFileSync(readmePath, "utf8");
+      if (!readme.includes("docs/ARCHITECTURE.md")) {
         readme = readme.replace(
-          '[Explore Features](#-key-features)',
-          '[Explore Features](#-key-features) • [Architecture](docs/ARCHITECTURE.md) • [Template Guide](docs/TEMPLATE_GUIDE.md) • [Bulk Spec](docs/BULK_IMPORT_SPEC.md) • [Verification Spec](docs/VERIFICATION_SPEC.md)'
+          "[Explore Features](#-key-features)",
+          "[Explore Features](#-key-features) • [Architecture](docs/ARCHITECTURE.md) • [Template Guide](docs/TEMPLATE_GUIDE.md) • [Bulk Spec](docs/BULK_IMPORT_SPEC.md) • [Verification Spec](docs/VERIFICATION_SPEC.md)",
         );
-        fs.writeFileSync(readmePath, readme, 'utf8');
+        fs.writeFileSync(readmePath, readme, "utf8");
       }
-    }
-  }
+    },
+  },
 ];
 
 console.log(`Executing ${commits.length} sequential commits...`);
@@ -1340,20 +1455,20 @@ for (let i = 0; i < commits.length; i++) {
   const { msg, action } = commits[i];
   const stepNum = i + 1;
   console.log(`\n[${stepNum}/${commits.length}] ${msg}`);
-  
+
   action();
-  
-  run('git add .');
+
+  run("git add .");
   try {
     const commitOut = run(`git commit -m "${msg}"`);
-    console.log('✓ Committed:', commitOut.split('\n')[0]);
+    console.log("✓ Committed:", commitOut.split("\n")[0]);
   } catch (err) {
-    console.warn('⚠️ Warning on commit:', err.message);
+    console.warn("⚠️ Warning on commit:", err.message);
   }
 }
 
-console.log('\n========================================');
-console.log('All 40 commits created successfully!');
-console.log('Verifying git log count...');
-const count = run('git rev-list --count HEAD');
-console.log('Total commits on HEAD:', count);
+console.log("\n========================================");
+console.log("All 40 commits created successfully!");
+console.log("Verifying git log count...");
+const count = run("git rev-list --count HEAD");
+console.log("Total commits on HEAD:", count);
