@@ -1,0 +1,5 @@
+recipient_name,course_name,specialization,issue_date,final_grade,certificate_id
+"Ethan Walker","Full-Stack Web Engineering Bootcamp","React & Node.js Architecture","2026-09-05","98.5%","BOOT-2026-501"
+"Maya Lin","Cloud Infrastructure & DevOps Mastery","Kubernetes & AWS CI/CD","2026-09-05","99.0%","BOOT-2026-502"
+"Oliver Twist","Smart Contract Security & Web3","Solidity & EVM Audit","2026-09-05","97.2%","BOOT-2026-503"
+"Zara Al-Mansoor","Applied Machine Learning & Neural Nets","PyTorch & Transformers","2026-09-05","100.0%","BOOT-2026-504"
