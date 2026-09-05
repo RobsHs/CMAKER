@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /templates
+Allow: /verify/
+Disallow: /api/private/
+
+Sitemap: https://cmaker.app/sitemap.xml
