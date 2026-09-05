@@ -88,7 +88,7 @@ export interface SealElement extends BaseElement {
 
 export interface QRCodeElement extends BaseElement {
   type: 'qrcode';
-  urlPattern: string; // e.g. "https://certifypro.app/verify/{{certificate_id}}"
+  urlPattern: string; // e.g. "https://cmaker.app/verify/{{certificate_id}}"
   fgColor: string;
   bgColor: string;
   includeLabel: boolean;

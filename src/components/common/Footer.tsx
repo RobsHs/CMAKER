@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
                 <Award className="w-4 h-4" />
               </div>
               <span className="text-base font-black tracking-tight text-slate-900 dark:text-white">
-                Certify<span className="text-indigo-600 dark:text-indigo-400">Pro</span>
+                C<span className="text-indigo-600 dark:text-indigo-400">MAKER</span>
               </span>
             </div>
             <p className="text-xs text-slate-500 leading-relaxed">
@@ -88,9 +88,9 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-          <p>&copy; {new Date().getFullYear()} CertifyPro Inc. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CMAKER Inc. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <span>CertifyPro — Create. Certify. Verify.</span>
+            <span>CMAKER — Create. Certify. Verify.</span>
           </div>
         </div>
       </div>

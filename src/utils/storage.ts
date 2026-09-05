@@ -2,23 +2,23 @@ import { AppSettings, AuditLog, CertificateDesign, CertificateProject, Certifica
 import { DEFAULT_CERTIFICATE_DESIGN, INITIAL_ISSUED_CERTIFICATES } from '../constants/sampleData';
 
 const STORAGE_KEYS = {
-  PROJECTS: 'certifypro_projects_v1',
-  ISSUED_CERTS: 'certifypro_issued_certificates_v1',
-  SETTINGS: 'certifypro_settings_v1',
-  AUDIT_LOGS: 'certifypro_audit_logs_v1',
-  CUSTOM_TEMPLATES: 'certifypro_custom_templates_v1'
+  PROJECTS: 'cmaker_projects_v1',
+  ISSUED_CERTS: 'cmaker_issued_certificates_v1',
+  SETTINGS: 'cmaker_settings_v1',
+  AUDIT_LOGS: 'cmaker_audit_logs_v1',
+  CUSTOM_TEMPLATES: 'cmaker_custom_templates_v1'
 };
 
 export const DEFAULT_APP_SETTINGS: AppSettings = {
-  appName: 'CertifyPro',
-  organizationName: 'CertifyPro Global Academy',
+  appName: 'CMAKER',
+  organizationName: 'CMAKER Global Academy',
   organizationLogo: '',
   defaultPaperSize: 'a4-landscape',
   defaultDateFormat: 'Long Date',
   pdfQuality: 'high',
   idFormatPrefix: 'CERT',
   idFormatPattern: 'CERT-{YEAR}-{NUMBER}',
-  verificationBaseUrl: 'https://certifypro.app/verify',
+  verificationBaseUrl: 'https://cmaker.app/verify',
   language: 'en',
   theme: 'light'
 };
@@ -26,6 +26,20 @@ export const DEFAULT_APP_SETTINGS: AppSettings = {
 // Seed initial project if empty
 function initializeStorage(): void {
   if (typeof window === 'undefined') return;
+
+  // Migrate legacy keys if present
+  const legacyKeys: Record<string, string> = {
+    certifypro_projects_v1: STORAGE_KEYS.PROJECTS,
+    certifypro_issued_certificates_v1: STORAGE_KEYS.ISSUED_CERTS,
+    certifypro_settings_v1: STORAGE_KEYS.SETTINGS,
+    certifypro_audit_logs_v1: STORAGE_KEYS.AUDIT_LOGS,
+    certifypro_custom_templates_v1: STORAGE_KEYS.CUSTOM_TEMPLATES,
+  };
+  for (const [oldKey, newKey] of Object.entries(legacyKeys)) {
+    if (!localStorage.getItem(newKey) && localStorage.getItem(oldKey)) {
+      localStorage.setItem(newKey, localStorage.getItem(oldKey)!);
+    }
+  }
 
   // Initialize issued certificates
   if (!localStorage.getItem(STORAGE_KEYS.ISSUED_CERTS)) {

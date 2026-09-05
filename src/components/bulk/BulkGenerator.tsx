@@ -47,7 +47,7 @@ export const BulkGenerator: React.FC = () => {
   // Download Sample CSV
   const handleDownloadSampleCsv = () => {
     const blob = new Blob([SAMPLE_CSV_CONTENT], { type: 'text/csv;charset=utf-8;' });
-    saveAs(blob, 'certifypro_sample_recipients.csv');
+    saveAs(blob, 'cmaker_sample_recipients.csv');
     showToast('Sample CSV template downloaded', 'success');
   };
 
@@ -139,7 +139,7 @@ export const BulkGenerator: React.FC = () => {
         recipientName: row.name,
         recipientEmail: row.email,
         title: design.dataFields.certificate_title || 'Certificate of Completion',
-        organization: design.dataFields.organization_name || 'CertifyPro Academy',
+        organization: design.dataFields.organization_name || 'CMAKER Academy',
         issueDate: row.date || design.dataFields.issue_date || new Date().toISOString().split('T')[0],
         status: 'valid',
         issuerName: design.dataFields.instructor_name || 'Director',
@@ -163,14 +163,14 @@ export const BulkGenerator: React.FC = () => {
       StorageService.saveIssuedCertificate(newCert);
 
       // Create manifest text record in ZIP
-      const certManifest = `CERTIFYPRO VERIFIED CREDENTIAL
+      const certManifest = `CMAKER VERIFIED CREDENTIAL
 ---------------------------------------------
 Certificate ID   : ${certId}
 Recipient Name   : ${row.name}
 Course / Program : ${row.course || design.dataFields.course_name}
 Organization     : ${design.dataFields.organization_name}
 Issue Date       : ${row.date || design.dataFields.issue_date}
-Verification URL : https://certifypro.app/verify/${certId}
+Verification URL : https://cmaker.app/verify/${certId}
 Verification Hash: ${newCert.verificationHash}
 ---------------------------------------------
 Status: VALID AND TAMPER-EVIDENT`;
@@ -206,7 +206,7 @@ Status: VALID AND TAMPER-EVIDENT`;
 
   const handleDownloadZip = () => {
     if (!generatedBatchZip) return;
-    saveAs(generatedBatchZip, `certifypro_bulk_batch_${Date.now()}.zip`);
+    saveAs(generatedBatchZip, `cmaker_bulk_batch_${Date.now()}.zip`);
     showToast('Batch certificates package downloaded', 'success');
   };
 

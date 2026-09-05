@@ -56,8 +56,8 @@ export const Navbar: React.FC = () => {
               <Award className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-lg font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-1">
-                Certify<span className="text-indigo-600 dark:text-indigo-400">Pro</span>
+              <span className="text-lg font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-0.5">
+                C<span className="text-indigo-600 dark:text-indigo-400">MAKER</span>
               </span>
               <span className="hidden sm:block text-[9px] font-semibold tracking-widest text-slate-400 uppercase -mt-1">
                 Professional Credentials

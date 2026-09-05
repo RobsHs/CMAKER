@@ -3,7 +3,7 @@ export type Language = 'en' | 'id';
 export const TRANSLATIONS = {
   en: {
     // Nav & Brand
-    brandName: 'CertifyPro',
+    brandName: 'CMAKER',
     brandTagline: 'Create. Certify. Verify.',
     navDashboard: 'Dashboard',
     navEditor: 'Editor',
@@ -34,7 +34,7 @@ export const TRANSLATIONS = {
     step5Title: 'Download or Batch Export',
     step5Desc: 'Export pristine 300 DPI vector PDFs individually or in bulk with CSV.',
     trustedVerificationTitle: 'Tamper-Evident Verification Architecture',
-    trustedVerificationDesc: 'Every certificate issued via CertifyPro includes a unique cryptographic identifier and scannable QR code. Employers and institutions can independently verify authenticity in seconds.',
+    trustedVerificationDesc: 'Every certificate issued via CMAKER includes a unique cryptographic identifier and scannable QR code. Employers and institutions can independently verify authenticity in seconds.',
 
     // Dashboard
     dashboardOverview: 'Overview',
@@ -239,7 +239,7 @@ export const TRANSLATIONS = {
 
   id: {
     // Nav & Brand
-    brandName: 'CertifyPro',
+    brandName: 'CMAKER',
     brandTagline: 'Create. Certify. Verify.',
     navDashboard: 'Dashboard',
     navEditor: 'Editor',
@@ -270,7 +270,7 @@ export const TRANSLATIONS = {
     step5Title: 'Unduh atau Ekspor Massal',
     step5Desc: 'Ekspor PDF 300 DPI tajam secara perorangan atau ratusan sekaligus via CSV.',
     trustedVerificationTitle: 'Arsitektur Verifikasi Anti-Pemalsuan',
-    trustedVerificationDesc: 'Setiap sertifikat yang diterbitkan CertifyPro memiliki nomor seri unik dan QR code. Lembaga atau pemberi kerja dapat memvalidasi keaslian dokumen dalam hitungan detik.',
+    trustedVerificationDesc: 'Setiap sertifikat yang diterbitkan CMAKER memiliki nomor seri unik dan QR code. Lembaga atau pemberi kerja dapat memvalidasi keaslian dokumen dalam hitungan detik.',
 
     // Dashboard
     dashboardOverview: 'Ringkasan',

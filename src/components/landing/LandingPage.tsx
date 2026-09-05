@@ -112,7 +112,7 @@ export const LandingPage: React.FC = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-xs font-semibold mb-6 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
-            <span>CertifyPro SaaS Platform — Create. Certify. Verify.</span>
+            <span>CMAKER SaaS Platform — Create. Certify. Verify.</span>
           </div>
 
           {/* Heading */}
@@ -152,7 +152,7 @@ export const LandingPage: React.FC = () => {
                 <div className="w-3 h-3 rounded-full bg-amber-500/80" />
                 <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
                 <span className="text-xs text-slate-400 font-mono ml-2 hidden sm:inline">
-                  CertifyPro Studio &bull; Academic Excellence Gold (A4 Landscape)
+                  CMAKER Studio &bull; Academic Excellence Gold (A4 Landscape)
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -174,7 +174,7 @@ export const LandingPage: React.FC = () => {
                 {/* Certificate Inner Ornaments */}
                 <div className="border border-[#C5A059] p-5 text-center space-y-2 relative">
                   <span className="text-[10px] font-semibold text-slate-500 tracking-widest uppercase">
-                    CERTIFYPRO GLOBAL ACADEMY
+                    CMAKER GLOBAL ACADEMY
                   </span>
                   <h2 className="text-xl sm:text-2xl font-serif font-bold text-slate-900 tracking-wide">
                     CERTIFICATE OF EXCELLENCE
@@ -400,7 +400,7 @@ export const LandingPage: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-slate-400 block text-[10px]">ISSUING BODY</span>
-                  <span className="font-bold text-white text-sm">CertifyPro Global Academy</span>
+                  <span className="font-bold text-white text-sm">CMAKER Global Academy</span>
                 </div>
                 <div>
                   <span className="text-slate-400 block text-[10px]">CREDENTIAL</span>

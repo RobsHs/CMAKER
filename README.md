@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎓 CertifyPro — Professional Certificate Generator
+# 🎓 CMAKER — Professional Certificate Generator
 
 ### _Create. Certify. Verify._
 
@@ -21,7 +21,7 @@
 
 ## 📌 Overview
 
-**CertifyPro** is a modern, high-performance web platform engineered for universities, bootcamps, corporate enterprises, event organizers, and online course creators. Built with **React 19**, **TypeScript**, and **Tailwind CSS v4**, it provides an intuitive visual design studio, client-side signature background transparentizer, foil seal generator, high-throughput bulk certificate generation via CSV, and public QR-code verification.
+**CMAKER** is a modern, high-performance web platform engineered for universities, bootcamps, corporate enterprises, event organizers, and online course creators. Built with **React 19**, **TypeScript**, and **Tailwind CSS v4**, it provides an intuitive visual design studio, client-side signature background transparentizer, foil seal generator, high-throughput bulk certificate generation via CSV, and public QR-code verification.
 
 Everything runs entirely in modern browsers with zero backend dependencies required for standalone operation, leveraging `localStorage` and `IndexedDB` for high-speed client-side persistence and cryptographic audit trails.
 
@@ -128,7 +128,7 @@ Every template is meticulously crafted with ~20+ architectural vector elements (
 ## 📂 Project Structure
 
 ```text
-web-dev12/
+cmaker/
 ├── public/                     # Static assets and favicon
 ├── src/
 │   ├── components/
@@ -189,8 +189,8 @@ web-dev12/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/certifypro.git
-cd certifypro
+git clone https://github.com/your-username/cmaker.git
+cd cmaker
 ```
 
 ### 2. Install Dependencies
@@ -264,7 +264,7 @@ To bulk generate certificates:
 
 ## 🔒 Verification & Security
 
-CertifyPro embeds a tamper-evident verification standard:
+CMAKER embeds a tamper-evident verification standard:
 
 1. Every certificate carries a unique deterministic or sequential ID (`CERT-YYYY-XXXXXX`).
 2. The dynamic QR Code encodes the direct URL:
@@ -282,7 +282,7 @@ CertifyPro embeds a tamper-evident verification standard:
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/your-username/certifypro/issues).
+Feel free to check the [issues page](https://github.com/your-username/cmaker/issues).
 
 1. Fork the project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
