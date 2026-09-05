@@ -34,7 +34,7 @@ export const LandingPage: React.FC = () => {
     {
       icon: <Award className="w-5 h-5 text-indigo-500" />,
       title: 'Professional Templates',
-      desc: '12+ industry-standard editable templates across academic, corporate, event, and creative domains.'
+      desc: '24+ industry-standard editable templates across academic, corporate, event, and creative domains.'
     },
     {
       icon: <Sliders className="w-5 h-5 text-violet-500" />,
@@ -77,7 +77,7 @@ export const LandingPage: React.FC = () => {
     {
       num: '01',
       title: 'Choose Template',
-      desc: 'Select from 12+ pre-designed templates or build a custom certificate from scratch.'
+      desc: 'Select from 24+ pre-designed templates or build a custom certificate from scratch.'
     },
     {
       num: '02',
@@ -301,7 +301,7 @@ export const LandingPage: React.FC = () => {
               onClick={() => setCurrentView('templates')}
               className="flex items-center gap-1 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
             >
-              <span>View all 12 templates</span>
+              <span>View all 24 templates</span>
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>

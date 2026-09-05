@@ -33,7 +33,7 @@ export const TemplatesTab: React.FC = () => {
           Professional Template Library
         </h4>
         <p className="text-xs text-slate-400">
-          Select from 12+ meticulously engineered, fully editable templates.
+          Select from 24+ meticulously engineered, fully editable templates.
         </p>
       </div>
 

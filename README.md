@@ -88,22 +88,34 @@ Everything runs entirely in modern browsers with zero backend dependencies requi
 
 ## 🏛️ Pre-Engineered Templates
 
-Every template is meticulously crafted with ~20+ architectural vector elements (no empty/bare spaces) across 4 major disciplines:
+Every template is meticulously crafted with ~20–25 architectural vector elements (no empty/bare spaces) across academic, corporate, event, and specialized professional disciplines:
 
-| Template                         | Category  | Key Highlights                                                                                                                         |
-| :------------------------------- | :-------: | :------------------------------------------------------------------------------------------------------------------------------------- |
-| **Classic Academic Excellence**  | Academic  | Double gold ornamental frame, corner filigrees, university crest, ISO badge, Latin motto, dual faculty signatories, gold foil seal, QR |
-| **Modern Corporate Achievement** | Corporate | Navy & cobalt geometric side accents, company header, VP & CEO signatories, verified shield seal, competencies checklist               |
-| **Minimalist Luxury Monochrome** | Creative  | Ultra-clean dual hairline frame, haute-couture typography, Great Vibes script accents, Paris atelier star seal                         |
-| **Tech & Coding Bootcamp**       | Creative  | Cyber bracket border, terminal prompt header, cryptographic SHA-256 block hash, CTO signature, cyber shield seal                       |
-| **Executive Leadership Award**   | Corporate | Antique bronze luxury border, governance council crest, Board Chair & CEO signatures, bronze laurel seal                               |
-| **Medical & Healthcare**         | Academic  | Clinical teal border, medical accreditation badge, Chief Medical Officer & Medical Board signatures, caduceus crest seal               |
-| **Global Seminar & Conference**  |   Event   | Deep royal purple and gold festive frames, keynote speaker signatures, conference star seal                                            |
-| **University Honors Diploma**    | Academic  | Traditional university diploma styling, Latin conferral phrasing, Provost & President signatures, embossed seal                        |
-| **Employee Recognition**         | Corporate | Star performer distinction, ribbon badge, department head & HR director signatures, excellence seal                                    |
-| **Athletic Championship**        |   Event   | High-energy sports tournament styling, athletic director signatures, gold victory champion seal                                        |
-| **Volunteer Appreciation**       |   Event   | Emerald community dedication borders, civic service badges, council president signatures, humanitarian seal                            |
-| **Creative Design Masterclass**  | Creative  | Contemporary typographic layout, jury president & guild signatures, creative curated seal                                              |
+| Template | Category | Key Highlights |
+| :--- | :---: | :--- |
+| **Classic Academic Excellence** | Academic | Double gold ornamental frame, corner filigrees, university crest, ISO badge, Latin motto, dual faculty signatories, gold foil seal, QR |
+| **Modern Corporate Achievement** | Corporate | Navy & cobalt geometric side accents, company header, VP & CEO signatories, verified shield seal, competencies checklist |
+| **Minimalist Luxury Monochrome** | Creative | Ultra-clean dual hairline frame, haute-couture typography, Great Vibes script accents, Paris atelier star seal |
+| **Tech & Coding Bootcamp** | Creative | Cyber bracket border, terminal prompt header, cryptographic SHA-256 block hash, CTO signature, cyber shield seal |
+| **Executive Leadership Award** | Corporate | Antique bronze luxury border, governance council crest, Board Chair & CEO signatures, bronze laurel seal |
+| **Medical & Healthcare** | Academic | Clinical teal border, medical accreditation badge, Chief Medical Officer & Medical Board signatures, caduceus crest seal |
+| **Global Seminar & Conference** | Event | Deep royal purple and gold festive frames, keynote speaker signatures, conference star seal |
+| **University Honors Diploma** | Academic | Traditional university diploma styling, Latin conferral phrasing, Provost & President signatures, embossed seal |
+| **Employee Recognition** | Corporate | Star performer distinction, ribbon badge, department head & HR director signatures, excellence seal |
+| **Athletic Championship** | Event | High-energy sports tournament styling, athletic director signatures, gold victory champion seal |
+| **Volunteer Appreciation** | Event | Emerald community dedication borders, civic service badges, council president signatures, humanitarian seal |
+| **Creative Design Masterclass** | Creative | Contemporary typographic layout, jury president & guild signatures, creative curated seal |
+| **Artificial Intelligence & Neural Systems** | Creative | Dark cyber cyan tech theme, neural network badge, model weights verification, research director signature |
+| **Haute Cuisine & Culinary Arts** | Creative | Burgundy & warm amber luxury frame, Michelin-style distinction star, Master Chef & Sommelier credentials, culinary guild seal |
+| **Conservatory of Music & Performing Arts** | Creative | Deep mahogany orchestral borders, gold musical treble clef crest, Dean & Maestro signatures, philharmonic seal |
+| **Commercial Aviation & Flight Rating** | Corporate | Navy and gold aeronautical wings emblem, FAA/EASA flight rating badge, Chief Flight Instructor signature, aero seal |
+| **Early Childhood & Kindergarten Diploma** | Academic | Vibrant sky-blue & sunny gold border, star badges, elementary principal signature, first milestone honors seal |
+| **Juris Doctor & Legal Bar Certification** | Academic | Prestigious navy and brass borders, Scales of Justice insignia, Chief Justice & Bar President signatures, legal notary seal |
+| **Occupational Health & Safety (HSE)** | Corporate | High-visibility warning gold and charcoal borders, safety shield emblem, OSHA/ISO compliance checklist, HSE Director signature |
+| **Luxury Real Estate & Platinum Broker** | Corporate | Onyx black and champagne gold luxury borders, architectural estate crest, Managing Director signature, platinum seal |
+| **International Language Mastery (CEFR C2)** | Academic | Global university crest, CEFR C2 multilingual fluency banner, Academic Dean & Council signatures, international seal |
+| **Blockchain & Smart Contract Auditor** | Creative | Dark emerald Web3 terminal motif, smart contract cryptographic address, Lead Security Auditor signature, zero-knowledge audit seal |
+| **Holistic Yoga & Wellness Alliance** | Creative | Serene sage green & botanical laurel motifs, RYT accreditation badge, Master Instructor signature, holistic wellness seal |
+| **Corporate ESG & Sustainability Leader** | Corporate | Forest emerald & leaf motifs, ESG net-zero governance checklist, Chief Sustainability Officer signature, green seal |
 
 ---
 

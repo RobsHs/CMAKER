@@ -41,6 +41,12 @@ export const ACCREDITATION_BADGE_SVG = `data:image/svg+xml;utf8,<svg xmlns="http
 // Gold Medal with Ribbons SVG
 export const GOLD_MEDAL_RIBBON_SVG = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 130" width="100" height="130"><polygon points="35,65 25,120 50,105 75,120 65,65" fill="%231e3a8a"/><polygon points="40,65 30,120 50,108 70,120 60,65" fill="%23b91c1c"/><circle cx="50" cy="50" r="38" fill="%23d4af37"/><circle cx="50" cy="50" r="32" fill="%23f59e0b"/><polygon points="50,26 56,38 70,38 58,47 62,60 50,52 38,60 42,47 30,38 44,38" fill="%23ffffff"/></svg>`;
 
+// Safety & Compliance Shield Badge SVG
+export const SAFETY_SHIELD_BADGE_SVG = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 115" width="100" height="115"><path d="M50 5 L88 22 C88 65 50 105 50 105 C50 105 12 65 12 22 Z" fill="%23d97706"/><path d="M50 12 L80 26 C80 62 50 96 50 96 C50 96 20 62 20 26 Z" fill="%230f172a"/><path d="M36 52 L46 62 L66 40" fill="none" stroke="%23f59e0b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="50" y="80" fill="%23ffffff" font-size="7.5" font-family="sans-serif" font-weight="bold" text-anchor="middle" letter-spacing="1">CERTIFIED</text></svg>`;
+
+// Global Education & Laurel Star Crest SVG
+export const GLOBAL_EDUCATION_CREST_SVG = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="46" fill="%230f172a"/><circle cx="50" cy="50" r="40" fill="none" stroke="%23d4af37" stroke-width="2"/><path d="M50 20 L58 36 L76 36 L62 47 L67 64 L50 54 L33 64 L38 47 L24 36 L42 36 Z" fill="%23d4af37"/><path d="M30 75 C40 84 60 84 70 75" fill="none" stroke="%23d4af37" stroke-width="2.5" stroke-linecap="round"/></svg>`;
+
 export const DEFAULT_CERTIFICATE_DESIGN: CertificateDesign = {
   id: 'default-academic-gold',
   name: 'Classic Academic Excellence',
